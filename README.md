@@ -39,7 +39,7 @@ When you open the app, there are two H&E images of mouse brain tissue sections o
 
 Spots are colored either by normalized expression or cell type proportions. You can visualize either data type by selecting a gene or a cell type in the top left panel. 
 
-Options:
+Formatting options:
   * opacity : sets the spot opacity to control transparanecy
   * size : adjust spot size
   * colors : select colorscale
