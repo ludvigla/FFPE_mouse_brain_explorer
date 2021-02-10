@@ -23,6 +23,7 @@ You can install the packages directly with the install-packages.R script:
 
 # Run the app
 From RStudio, navigate to the cloned repository:
+
 `setwd("~/FFPE_mousebrain_explorer")`
 
 You can then activate the app by running:
@@ -39,10 +40,10 @@ When you open the app, there are two H&E images of mouse brain tissue sections o
 Spots are colored either by normalized expression or cell type proportions. You can visualize either data type by selecting a gene or a cell type in the top left panel. 
 
 Options:
-  opacity : sets the spot opacity to control transparanecy
-  size : adjust spot size
-  colors : select colorscale
-  edgecolor : adds a border around each spot
-  scale opacity : apply a transparency scaling of the spots which is proportional to the values being visualized (low value = high transparency, high value = opaque)
+  * opacity : sets the spot opacity to control transparanecy
+  * size : adjust spot size
+  * colors : select colorscale
+  * edgecolor : adds a border around each spot
+  * scale opacity : apply a transparency scaling of the spots which is proportional to the values being visualized (low value = high transparency, high value = opaque)
   
 ![](app.png)
