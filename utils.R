@@ -1,5 +1,12 @@
 require(ggplot2)
 require(RColorBrewer)
+library(ggplot2)
+library(magrittr)
+library(zeallot)
+library(scales)
+library(shiny)
+library(viridis)
+library(shinydashboard)
 
 # FUNCTIONS -----------
 

@@ -1,13 +1,3 @@
-library(ggplot2)
-library(magrittr)
-library(magick)
-library(zeallot)
-library(scales)
-library(shiny)
-library(shinyWidgets)
-library(shinycssloaders)
-library(shinydashboard)
-
 source("utils.R")
 options(shiny.usecairo = FALSE)
 
@@ -26,7 +16,7 @@ imdims.list <- readRDS("data/imdims.list")
 
 ui <- dashboardPage(
 
-  header = dashboardHeader(title = "FFPE - mouse brain"),
+  header = dashboardHeader(title = "FFPE mouse brain \ndata explorer"),
 
   sidebar = dashboardSidebar(
     width = 250,
@@ -169,6 +159,7 @@ server <- function(input, output, session) {
         dfs <- diff(dims)
         
         dt.subset <- subset(dt, sample == paste0(i))
+        tit <- ifelse(i == 1, "FFPE", "FF")
         
         # Check if alpha scaling is activated
         if ("alpha" %in% colnames(dt)) {
@@ -200,8 +191,8 @@ server <- function(input, output, session) {
           theme_empty +
 
           ggtitle(ifelse(rv$lastBtn %in% "cells",
-                        paste0("Cell type: ", variable),
-                        paste0("Gene: ", variable))) +
+                        paste0(tit, ": ", variable),
+                        paste0(tit, ": ", variable))) +
 
           labs(fill = ifelse(rv$lastBtn %in% "cells",
                             "Cell type \nproportion",
