@@ -26,8 +26,10 @@ From RStudio, navigate to the cloned repository:
 `setwd("~/FFPE_mousebrain_explorer")`
 
 You can then activate the app by running:
-`library(shiny)
-runApp()`
+
+`library(shiny)`
+
+`runApp()`
 
 Or alternatively you can open the app.R file File->Open file->.../app.R and then click on the Run App at the top of the script.
 
