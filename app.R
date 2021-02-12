@@ -157,7 +157,7 @@ server <- function(input, output, session) {
         c(dt, variable) %<-% get_data()
         dims <- imdims.list[[i]][2:3] %>% as.numeric()
         dfs <- diff(dims)
-        
+        max_val <- max(dt[, variable])
         dt.subset <- subset(dt, sample == paste0(i))
         tit <- ifelse(i == 1, "FFPE", "FF")
         
@@ -200,7 +200,7 @@ server <- function(input, output, session) {
 
           scale_x_continuous(limits = c(dfs/2, dims[1] - dfs/3), expand = c(0, 0)) +
           scale_y_continuous(limits = c(ifelse(i == 2, dfs/4, dfs), dims[2] - dfs/3), expand = c(0, 0)) +
-          scale_fill_gradientn(colours = COLORS[[input$cscale]])
+          scale_fill_gradientn(colours = COLORS[[input$cscale]], limits = c(0, max_val))
         
         p
               },
