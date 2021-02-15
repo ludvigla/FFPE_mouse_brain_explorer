@@ -1,4 +1,4 @@
-# FFPE mousebrain spatial transcriptomics data explorer
+# FFPE mouse brain spatial transcriptomics data explorer
 With this app you can explore spatial transcriptomics data of coronal sections from mouse brain tissue presented in "Genome-wide Spatial Expression Profiling in Formalin-fixed Tissues" (Villacampa E. and Larsson. L et al).
 
 # Installation
